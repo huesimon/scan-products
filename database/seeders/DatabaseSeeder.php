@@ -27,5 +27,14 @@ class DatabaseSeeder extends Seeder
         Product::factory()->state(['name' => 'Coffee Mug'])->hasAttached([
             $drinkware,
         ])->create();
+
+        Product::factory()->hasSubProducts([
+            'name' => 'Drink Coaster',
+            'price' => 5])
+        ->state([
+            'name' => 'Coffee Mug + Coaster combo'])
+        ->hasAttached([
+            $drinkware,
+        ])->create();
     }
 }
