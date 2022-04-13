@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->text('description');
+            $table->string('sku')->unique();
+            $table->boolean('in_stock')->default(true);
+            $table->integer('price');
             $table->timestamps();
         });
     }
