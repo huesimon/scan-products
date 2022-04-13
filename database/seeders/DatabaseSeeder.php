@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Tag;
+use App\Models\Product;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -21,5 +22,10 @@ class DatabaseSeeder extends Seeder
         $kvmSwitch = Tag::factory()->state(['name' => 'kvm switch'])->create();
         $hoodies = Tag::factory()->state(['name' => 'hoodies'])->create();
         $specials = Tag::factory()->state(['name' => 'specials'])->create();
+
+        // products
+        Product::factory()->state(['name' => 'Coffee Mug'])->hasAttached([
+            $drinkware,
+        ])->create();
     }
 }

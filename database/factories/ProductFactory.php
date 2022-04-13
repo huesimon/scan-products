@@ -17,7 +17,11 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->word,
+            'description' => $this->faker->text,
+            'sku' => $this->faker->unique()->numberBetween(10000, 99999),
+            'in_stock' => $this->faker->boolean,
+            'price' => $this->faker->randomNumber(),
         ];
     }
 }
