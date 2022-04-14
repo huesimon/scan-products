@@ -15,7 +15,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return Product::with([
+            'tags',
+            'subProducts',
+        ])
+        ->get();
     }
 
     /**
@@ -36,7 +40,7 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        //
+        return Product::create($request->validated());
     }
 
     /**
@@ -47,7 +51,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        return $product; // TODO:: Make a resource
     }
 
     /**
@@ -70,7 +74,9 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-        //
+        $product->update($request->validated());
+        return $product;
+
     }
 
     /**
@@ -81,6 +87,6 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        return $product->delete();
     }
 }
