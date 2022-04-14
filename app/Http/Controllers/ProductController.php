@@ -19,6 +19,7 @@ class ProductController extends Controller
             'tags',
             'subProducts',
         ])
+        ->filter(request(['in_stock']))
         ->get();
     }
 

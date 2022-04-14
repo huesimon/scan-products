@@ -18,4 +18,11 @@ class Product extends Model
     {
         return $this->belongsToMany(Product::class, 'product_products', 'main_product_id', 'sub_product_id');
     }
+
+    public function scopeFilter($query, $filters)
+    {
+        $query->when($filters['in_stock'] ?? null, function ($query, $search) {
+            $query->where('in_stock', $search);
+        });
+    }
 }
