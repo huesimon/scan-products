@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\Product;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 
@@ -89,5 +91,39 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         return $product->delete();
+    }
+
+    public function addTag(Request $request, Product $product)
+    {
+        $validated = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+        ]);
+
+        $tag = Tag::firstOrCreate(
+            ['name' => $validated['name']],
+        );
+
+        if ($product->hasTag($tag)) {
+            return response()->json([
+                'message' => 'Tag already exists',
+            ], 422);
+        }
+
+        $product->tags()->attach($tag);
+
+        return $product->tags;
+    }
+
+    public function attachTag(Request $request, Product $product, Tag $tag)
+    {
+        if ($product->hasTag($tag)) {
+            return response()->json([
+                'message' => 'Tag already exists',
+            ], 422);
+        }
+
+        $product->tags()->attach($tag);
+
+        return $product->load('tags');
     }
 }

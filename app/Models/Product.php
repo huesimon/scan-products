@@ -25,4 +25,9 @@ class Product extends Model
             $query->where('in_stock', $search == 'true' ? true : false); // TODO: make this work with bools?
         });
     }
+
+    public function hasTag(Tag $tag): bool
+    {
+        return $this->tags->contains($tag);
+    }
 }

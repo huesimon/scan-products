@@ -24,6 +24,8 @@ Route::get('/', function () {
 });
 
 Route::resource('products', ProductController::class);
+Route::post('products/{product}/add-tag', [ProductController::class, 'addTag']);
+Route::post('products/{product}/tag/{tag}', [ProductController::class, 'attachTag']);
 Route::resource('tags', TagController::class);
 
 
