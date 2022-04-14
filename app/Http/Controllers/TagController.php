@@ -15,7 +15,7 @@ class TagController extends Controller
      */
     public function index()
     {
-        //
+        return Tag::all();
     }
 
     /**
@@ -36,7 +36,7 @@ class TagController extends Controller
      */
     public function store(StoreTagRequest $request)
     {
-        //
+        return Tag::create($request->validated());
     }
 
     /**
@@ -47,7 +47,7 @@ class TagController extends Controller
      */
     public function show(Tag $tag)
     {
-        //
+        return $tag; // TODO:: Make a resource
     }
 
     /**
@@ -70,7 +70,9 @@ class TagController extends Controller
      */
     public function update(UpdateTagRequest $request, Tag $tag)
     {
-        //
+        $tag->update($request->validated());
+
+        return $tag;
     }
 
     /**
@@ -81,6 +83,6 @@ class TagController extends Controller
      */
     public function destroy(Tag $tag)
     {
-        //
+        return $tag->delete();
     }
 }

@@ -2,6 +2,7 @@
 
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TagController;
 use App\Http\Controllers\ProductController;
 
 /*
@@ -23,6 +24,8 @@ Route::get('/', function () {
 });
 
 Route::resource('products', ProductController::class);
+Route::resource('tags', TagController::class);
+
 
 Route::middleware([
     'auth:sanctum',
