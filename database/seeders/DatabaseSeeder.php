@@ -50,5 +50,18 @@ class DatabaseSeeder extends Seeder
                 $specials
             ])
             ->create();
+
+        // product with a sub product, and multiple tags
+        Product::factory()
+            ->state([
+                'name' => '1.4 Display Port KVM Switch - Quad Monitor - Two Computer',
+                'price' => 800
+            ])->hasAttached([
+                $hardware,
+                $specials,
+            ])->hasSubProducts([
+                'name' => 'USB-C to USB-C Cable - Black | 39 Inches (100 cm)',
+                'price' => 5,
+            ])->create();
     }
 }
