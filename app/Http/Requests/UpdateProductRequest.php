@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateProductRequest extends FormRequest
@@ -24,9 +25,9 @@ class UpdateProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['sometimes', 'string', 'max:255', 'unique:products'],
+            'name' => ['sometimes', 'string', 'max:255', Rule::unique('products')->ignore($this->product)],
             'description' => ['sometimes', 'string', 'max:255'],
-            'sku' => ['sometimes', 'string', 'max:255', 'unique:products'],
+            'sku' => ['sometimes', 'string', 'max:255', Rule::unique('products')->ignore($this->product)],
             'in_stock' => ['sometimes', 'boolean'],
             'price' => ['sometimes', 'integer'],
         ];
