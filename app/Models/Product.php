@@ -22,8 +22,7 @@ class Product extends Model
     public function scopeFilter($query, $filters)
     {
         $query->when($filters['in_stock'] ?? null, function ($query, $search) {
-            // TODO:: Problem with 0 not being parsed in the query
-            $query->where('in_stock', $search);
+            $query->where('in_stock', $search == 'true' ? true : false); // TODO: make this work with bools?
         });
     }
 }
