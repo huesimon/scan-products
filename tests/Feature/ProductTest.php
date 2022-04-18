@@ -42,4 +42,18 @@ class ProductTest extends TestCase
         ])->assertStatus(200)
         ->assertSee('Tag 1');
     }
+
+    public function test_can_not_add_duplicate_tags()
+    {
+        $product = Product::factory()->create();
+
+        $this->postJson(route('products.add-tag', $product), [
+            'name' => 'Tag 1',
+        ])->assertStatus(200)
+        ->assertSee('Tag 1');
+
+        $this->postJson(route('products.add-tag', $product), [
+            'name' => 'Tag 1',
+        ])->assertStatus(422);
+    }
 }
