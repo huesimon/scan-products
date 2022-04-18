@@ -110,6 +110,7 @@ class ProductController extends Controller
         }
 
         $product->tags()->attach($tag);
+        $product->refresh();
 
         return $product->tags;
     }
