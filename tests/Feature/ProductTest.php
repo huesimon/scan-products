@@ -57,6 +57,24 @@ class ProductTest extends TestCase
         ])->assertStatus(422);
     }
 
+    public function test_can_update_product()
+    {
+        $product = Product::factory()->create();
+
+        $this->putJson(route('products.update', $product), [
+            'name' => 'Product updated',
+            'description' => 'Product 1 description',
+            'price' => '100',
+            'sku' => 'sku-updated',
+            'in_stock' => true,
+            'price' => '100',
+        ])->assertStatus(200)
+        ->assertSee('Product updated')
+        ->assertSee('Product 1 description')
+        ->assertSee('100')
+        ->assertSee('sku-updated');
+    }
+
     public function test_get_products_in_stock()
     {
         Product::factory()->create([
