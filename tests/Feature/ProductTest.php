@@ -56,4 +56,22 @@ class ProductTest extends TestCase
             'name' => 'Tag 1',
         ])->assertStatus(422);
     }
+
+    public function test_get_products_in_stock()
+    {
+        Product::factory()->create([
+            'name' => 'Product 1',
+            'in_stock' => true,
+        ]);
+
+        Product::factory()->create([
+            'name' => 'Product NOT in stock',
+            'in_stock' => false,
+        ]);
+
+        $this->get(route('products.index', ['in_stock' => 'true']))
+            ->assertStatus(200)
+            ->assertSee('Product 1')
+            ->assertDontSee('Product NOT in stock');
+    }
 }
