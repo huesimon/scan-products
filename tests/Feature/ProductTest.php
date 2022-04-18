@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\Tag;
 use Tests\TestCase;
 use App\Models\Product;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -55,6 +56,22 @@ class ProductTest extends TestCase
         $this->postJson(route('products.add-tag', $product), [
             'name' => 'Tag 1',
         ])->assertStatus(422);
+    }
+
+    public function test_can_attatch_tag_to_product()
+    {
+        $product = Product::factory()->create();
+        $tag = Tag::factory()->create();
+
+        $this->postJson(route('products.attach-tag', [$product, $tag]))
+            ->assertStatus(200)
+            ->assertSee($tag->name)
+            ->assertSee($product->name);
+
+        $this->assertDatabaseHas('product_tags', [
+            'product_id' => $product->id,
+            'tag_id' => $tag->id,
+        ]);
     }
 
     public function test_can_update_product()
