@@ -1,0 +1,1254 @@
+{
+	"info": {
+		"_postman_id": "13716288-1acb-455c-85ed-71f9e17d5588",
+		"name": "Scan endpoint collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://sdm.nemt.link/products",
+									"protocol": "https",
+									"host": [
+										"sdm",
+										"nemt",
+										"link"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 09:30:08 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 09:30:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IjB4b0paZVFrQVd2RkNBSzFwZWxpVnc9PSIsInZhbHVlIjoiQVdRdHRBcWs1NGcwVzNZUVFGZ2w3MElRM3QvOEI2UEEraVBBa25ZTE5CNEkxMGF3UnlFZDFTdHdQaE96MHRtSzVzTEtSVGhHUVFFbi84TGEyOGpUbnRpSXBOclF5cjJ0WlJ0NVlOMEdJNDVVRFR0dmdTN3pHakJRSzk2V3dVdlUiLCJtYWMiOiI3ZDk2NTIxMmNlMGVkZjE4YTMyM2Y4MmFmNmMwZjZlZTMzY2Q0NzA3OTE1ZDE5YjkzMDZiYTNhM2I4NTg1ZDIxIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 11:30:08 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6InAvQTJLb204azBtNXFhQks2S3lDUEE9PSIsInZhbHVlIjoiN2pyQnFUaEtGMlpNd3FtdGp1VTM2U1YxNXpVTjFvSlg1QmVOOEJUbmRGR3BLbjNrZlBxajdDNlMrNjhzeDMwajEveW5CS1BrRHAvUFQ0UjVvRFppNlpOQmZFMUlhNEFwazdMMjRqSkpYYnorazRzc2toMDEyd2hJSElmRVBPZEkiLCJtYWMiOiJkYTExMTI2YjA4YTY0OGZhOWI5ZTM0YzljMjMyN2NjZDBhNGNjN2VhZmM0M2NmZWE3MDRhYWZmYTkzMTJmYzE5IiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 11:30:08 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Coffee Mug\",\n        \"description\": \"Eaque sunt repellat omnis saepe beatae quo maiores. Deserunt quia incidunt aut voluptatem repudiandae ex eius distinctio. Voluptatem velit qui atque consequatur sit aperiam.\",\n        \"sku\": \"55396\",\n        \"in_stock\": 0,\n        \"price\": 627565,\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"tags\": [\n            {\n                \"id\": 1,\n                \"name\": \"drinkware\",\n                \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"pivot\": {\n                    \"product_id\": 1,\n                    \"tag_id\": 1\n                }\n            }\n        ],\n        \"sub_products\": []\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Coffee Mug + Coaster combo\",\n        \"description\": \"Et et deserunt occaecati odio voluptate rerum. Molestias qui et pariatur asperiores eveniet quis dolores. Ipsa sed velit autem dolores sint.\",\n        \"sku\": \"60498\",\n        \"in_stock\": 1,\n        \"price\": 725,\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"tags\": [\n            {\n                \"id\": 1,\n                \"name\": \"drinkware\",\n                \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"pivot\": {\n                    \"product_id\": 2,\n                    \"tag_id\": 1\n                }\n            }\n        ],\n        \"sub_products\": [\n            {\n                \"id\": 3,\n                \"name\": \"Drink Coaster\",\n                \"description\": \"Esse debitis est natus aut repudiandae. Quam omnis voluptatibus aut ipsum eius. Ea quae ex excepturi. Consequatur suscipit eius quos earum numquam. Eos accusantium dolor aut qui repudiandae at et.\",\n                \"sku\": \"70087\",\n                \"in_stock\": 0,\n                \"price\": 5,\n                \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"pivot\": {\n                    \"main_product_id\": 2,\n                    \"sub_product_id\": 3\n                },\n                \"tags\": []\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Drink Coaster\",\n        \"description\": \"Esse debitis est natus aut repudiandae. Quam omnis voluptatibus aut ipsum eius. Ea quae ex excepturi. Consequatur suscipit eius quos earum numquam. Eos accusantium dolor aut qui repudiandae at et.\",\n        \"sku\": \"70087\",\n        \"in_stock\": 0,\n        \"price\": 5,\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"tags\": [],\n        \"sub_products\": []\n    },\n    {\n        \"id\": 4,\n        \"name\": \"1.4 Display Port KVM Switch - Dual Monitor - Two Computer\",\n        \"description\": \"Et asperiores et ut molestias id vitae eos. Ab quod rem vero est qui voluptas. Blanditiis ipsum id facilis voluptatem cum sint natus.\",\n        \"sku\": \"89549\",\n        \"in_stock\": 1,\n        \"price\": 449,\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"tags\": [\n            {\n                \"id\": 2,\n                \"name\": \"hardware\",\n                \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"pivot\": {\n                    \"product_id\": 4,\n                    \"tag_id\": 2\n                }\n            },\n            {\n                \"id\": 5,\n                \"name\": \"specials\",\n                \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"pivot\": {\n                    \"product_id\": 4,\n                    \"tag_id\": 5\n                }\n            }\n        ],\n        \"sub_products\": []\n    },\n    {\n        \"id\": 5,\n        \"name\": \"1.4 Display Port KVM Switch - Quad Monitor - Two Computer\",\n        \"description\": \"Dignissimos cupiditate est sint ipsam aperiam pariatur alias. Aut et dolore ab repellat accusantium delectus. Sit ratione quia maxime rerum similique.\",\n        \"sku\": \"94082\",\n        \"in_stock\": 0,\n        \"price\": 800,\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"tags\": [\n            {\n                \"id\": 2,\n                \"name\": \"hardware\",\n                \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"pivot\": {\n                    \"product_id\": 5,\n                    \"tag_id\": 2\n                }\n            },\n            {\n                \"id\": 5,\n                \"name\": \"specials\",\n                \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"pivot\": {\n                    \"product_id\": 5,\n                    \"tag_id\": 5\n                }\n            }\n        ],\n        \"sub_products\": [\n            {\n                \"id\": 6,\n                \"name\": \"USB-C to USB-C Cable - Black | 39 Inches (100 cm)\",\n                \"description\": \"Sed voluptate qui ducimus excepturi cupiditate. Dolorum assumenda numquam atque placeat corrupti. Nobis quisquam eum dicta et incidunt.\",\n                \"sku\": \"74730\",\n                \"in_stock\": 1,\n                \"price\": 5,\n                \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"pivot\": {\n                    \"main_product_id\": 5,\n                    \"sub_product_id\": 6\n                },\n                \"tags\": [\n                    {\n                        \"id\": 2,\n                        \"name\": \"hardware\",\n                        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n                        \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n                        \"pivot\": {\n                            \"product_id\": 6,\n                            \"tag_id\": 2\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    {\n        \"id\": 6,\n        \"name\": \"USB-C to USB-C Cable - Black | 39 Inches (100 cm)\",\n        \"description\": \"Sed voluptate qui ducimus excepturi cupiditate. Dolorum assumenda numquam atque placeat corrupti. Nobis quisquam eum dicta et incidunt.\",\n        \"sku\": \"74730\",\n        \"in_stock\": 1,\n        \"price\": 5,\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"tags\": [\n            {\n                \"id\": 2,\n                \"name\": \"hardware\",\n                \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"pivot\": {\n                    \"product_id\": 6,\n                    \"tag_id\": 2\n                }\n            }\n        ],\n        \"sub_products\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Products In Stock",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/products?in_stock=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "in_stock",
+									"value": "true",
+									"description": "true or false"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Products In Stock",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/products?in_stock=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "in_stock",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 09:30:49 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 09:30:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IjZhOFgxdzNZVUtVK3E4U0JhM1VMcUE9PSIsInZhbHVlIjoiZjU5Qi9WZ1BrVWlRU3BRaVhXeUVzK0VqMjMzWG9FcWluZnpxQVZXUjB2YW1qYVRSZlFvTnVFY0FmVGJ4SFV0Um9wdk43NGZSaWZvYmVjNXJTRlQxa1ZwbXNXbkZRY1VpSWU2SHFVNEIwQTVCTFdJaEtaZFNMb2kxeU1XWmpNem8iLCJtYWMiOiI3NGFjMDg0ZmVhNTFmM2JjMmFiNjU5NmU2NTAxNWIyMWM2YTFhMmQxZmExZWEwMzc3OTA5OGIxZjQzYmQyOTFiIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 11:30:49 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6ImdwakVCVDdBK1BZeUZRRXozaHhCZEE9PSIsInZhbHVlIjoidXo1aFl2UVJmTGsxN1ZZNlV0WXZwSnl1aTB4MUhuQ2pTcndCRnQ5Szc1MURidmllUElTQ3J4TjZ1UE1HT2RaTU1CL3FzNjM5N3B1WXVsdkRWejYvK2dlZlpvKzV0YVA0NFh3Ym5OMUJNUGFMMmsxMFBhVnN3clNVRVhYYTBHSFUiLCJtYWMiOiI3ZWY1YzZjZjdmMjI2MzAxYWFmYjI1ODI5ZTg3YzQ0YjlkMzI3NjAzOTk4YWFiYjEwN2VmYmE5MDU2MWZlZGI4IiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 11:30:49 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"Coffee Mug + Coaster combo\",\n        \"description\": \"Et et deserunt occaecati odio voluptate rerum. Molestias qui et pariatur asperiores eveniet quis dolores. Ipsa sed velit autem dolores sint.\",\n        \"sku\": \"60498\",\n        \"in_stock\": 1,\n        \"price\": 725,\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"tags\": [\n            {\n                \"id\": 1,\n                \"name\": \"drinkware\",\n                \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"pivot\": {\n                    \"product_id\": 2,\n                    \"tag_id\": 1\n                }\n            }\n        ],\n        \"sub_products\": [\n            {\n                \"id\": 3,\n                \"name\": \"Drink Coaster\",\n                \"description\": \"Esse debitis est natus aut repudiandae. Quam omnis voluptatibus aut ipsum eius. Ea quae ex excepturi. Consequatur suscipit eius quos earum numquam. Eos accusantium dolor aut qui repudiandae at et.\",\n                \"sku\": \"70087\",\n                \"in_stock\": 0,\n                \"price\": 5,\n                \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"pivot\": {\n                    \"main_product_id\": 2,\n                    \"sub_product_id\": 3\n                },\n                \"tags\": []\n            }\n        ]\n    },\n    {\n        \"id\": 4,\n        \"name\": \"1.4 Display Port KVM Switch - Dual Monitor - Two Computer\",\n        \"description\": \"Et asperiores et ut molestias id vitae eos. Ab quod rem vero est qui voluptas. Blanditiis ipsum id facilis voluptatem cum sint natus.\",\n        \"sku\": \"89549\",\n        \"in_stock\": 1,\n        \"price\": 449,\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"tags\": [\n            {\n                \"id\": 2,\n                \"name\": \"hardware\",\n                \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"pivot\": {\n                    \"product_id\": 4,\n                    \"tag_id\": 2\n                }\n            },\n            {\n                \"id\": 5,\n                \"name\": \"specials\",\n                \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"pivot\": {\n                    \"product_id\": 4,\n                    \"tag_id\": 5\n                }\n            }\n        ],\n        \"sub_products\": []\n    },\n    {\n        \"id\": 6,\n        \"name\": \"USB-C to USB-C Cable - Black | 39 Inches (100 cm)\",\n        \"description\": \"Sed voluptate qui ducimus excepturi cupiditate. Dolorum assumenda numquam atque placeat corrupti. Nobis quisquam eum dicta et incidunt.\",\n        \"sku\": \"74730\",\n        \"in_stock\": 1,\n        \"price\": 5,\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"tags\": [\n            {\n                \"id\": 2,\n                \"name\": \"hardware\",\n                \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n                \"pivot\": {\n                    \"product_id\": 6,\n                    \"tag_id\": 2\n                }\n            }\n        ],\n        \"sub_products\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Third product\",\r\n    \"description\": \"long text about the product\",\r\n    \"sku\": \"scan-3\",\r\n    \"in_stock\": 1,\r\n    \"price\": 1337\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"new product\",\r\n    \"description\": \"long text about the product\",\r\n    \"sku\": \"scan-123123123\",\r\n    \"in_stock\": 1,\r\n    \"price\": 1337\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 09:34:13 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 09:34:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IkI3ZU1jak9hY2NHalJrbGlZWHBpVnc9PSIsInZhbHVlIjoibjJ1c2NyWnAvbGNyZlJGTWduVWRoQWJqbk95WTkxWHhlZ2c5ZksrUWFUNGFFd095RnpCQUsxOWMwRnZzQklJRkJ2YitIKzhUSnpEYm1IUXd4aitMcHdsQU1sZEQ2TEtxbmhGMnFveHovT0tiUTZjaTQ1YWNpOVIycUdvOC9ucDMiLCJtYWMiOiI0Zjk2ODY1NGNjNzE5NGQyM2QxOTYyNTExNzlhMjRkY2Q5YmM5YTAwNDhiNDY4MDc4Y2RlNmZlYzk4YjAyYzU2IiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 11:34:13 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6InJ3NENPWFcvQTUyd09NdjQ1Q2dkaFE9PSIsInZhbHVlIjoiVTdqWVdpREpjMDZXQjZva3FSYXJjd1FaTEQ3ZVpuK042OWV1b2cxWHNmdlM2Q3Y0Y1BoL0NtZG1tZlg3RTBtaVhJT1NZZWdsbzg0SUVIcW1Xb0RWV3cwRnV5OWdRMDhMR0E0RUxwZmxOTVo3N1dVN0VTNE55VXZJYUFXMWVFU1QiLCJtYWMiOiJhYjM4ZGI4Y2JhYTkxODE4MjA5OWZiM2NlZTdlODkyMzk0MzI1NDAzMjJmZTM3ZTBjY2QyZjhiZDUxZGEwZmRkIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 11:34:13 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"new product\",\n    \"description\": \"long text about the product\",\n    \"sku\": \"scan-123123123\",\n    \"in_stock\": 1,\n    \"price\": 1337,\n    \"updated_at\": \"2022-04-13T09:34:13.000000Z\",\n    \"created_at\": \"2022-04-13T09:34:13.000000Z\",\n    \"id\": 7\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products/7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Product",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/products/7",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 09:36:02 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 09:36:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IlE0YkJjcnZyS1A1c3oyNzFyMUJ3T1E9PSIsInZhbHVlIjoiMWJKYnFlL3RYeXB3RG9xeU1wMndWMDcxamNXTGNYaTRmb0lyRW0wMUFrQWQvYjZyUHZOSXBIaGVReVdUSFJJejEwdmRoTVpLaGpUeTk1ZXgzYi9hZ2ZhNFRraWhNeS9Ea3RzaXYzTkdQMGh4b0lYZ3hVdWlQbjdwS2RwWWtQQnoiLCJtYWMiOiJhZTUzNTA4NWJmZmMzMDdhNmFhZjY0ZWU5N2ZlZmMxYTEzNzdiYTE5ZDRiZjJmNmI5M2RlZDUyMDkwMzY4NTVkIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 11:36:02 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IlR5eThUczhSVTR3elhLZC9oNTdHaXc9PSIsInZhbHVlIjoickJkcndJWEVLUjl3M1hybzJRU1ZPeVlGOGU3R1RobFVhYk0wdzhzdDlDaDY0WHJjdXNMb2svdGdid0Q2WFRTREY3b1lMUGkyRWNRMEYxblJUMG52RHQ1RG5zWi9TOTRETlJheUdhU3JDUjJQR2NnbEZaYUdLOUR4ZkhTMklidmIiLCJtYWMiOiJhN2E0NjMxMGNiYjY2NzA3MjZmMTZlMWIyZTQ1OTcyYWU5MjA4ZWU2ODFhN2ViZTlhMTRkNTdkMmY0ZmE5MjRiIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 11:36:02 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						},
+						{
+							"name": "Delete Product 404",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/products/7",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"7"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 09:36:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 09:36:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6ImVnbno2QzBtMXZZZ3g1bEN5RTdXYkE9PSIsInZhbHVlIjoiTUlVbUVDZFp6bERTNEY3eTdWSlhGSG1UTWczS3NiVkUyVHFjdnA5eFpEcXZyOFNMeHhza0F5N1JPLzg4MlJPbFZVSTgvOHg0ejV1eDc2cWdDOThZVFhiZXZSMVNGZFdONEYwS3RtcXJyVEtoS0MvMEl2b1JDdkpKT0E3c24yNDAiLCJtYWMiOiJiYWM5MzA3NTM3OGZmYzExYjk3NDY5Mzg5ZmU5OTQyMGE3ZmQ5ZjQ2ZjhlY2FiM2E4YWU4Y2YwYzQwZWY0NDNmIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 11:36:56 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IkN2K296TDZJQmlIVUhkd1phZzViOUE9PSIsInZhbHVlIjoiWlRiajcxUHdEbWU0YkZ1SVlmeVZjSWYzcG5aeGNSU3NlRFAxUXZZbEZiRE1XTWF3a3pNMDAyTXYxSjdRVDg0UUNwSkdaak41N2h1c2ZWWm5POW15QzRWVVBQR2pNc3lQK05zZ01hU3VlczhEaHViMXFBOUQ4T216dE42cjdnMnIiLCJtYWMiOiI3ZTc5NGJmZWU5Yzk3M2NlZDRiMGU1NzUzOGRhZTdmZGMyMGQxMjgzNDE0ODM1OTVjMjdkZDZjMTg0ODQyMTIzIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 11:36:56 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No query results for model [App\\\\Models\\\\Product] 7\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n    \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n    \"line\": 378,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n            \"line\": 354,\n            \"function\": \"prepareException\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Pipeline.php\",\n            \"line\": 51,\n            \"function\": \"render\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 185,\n            \"function\": \"handleException\",\n            \"class\": \"Illuminate\\\\Routing\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\VerifyCsrfToken.php\",\n            \"line\": 78,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\VerifyCsrfToken\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\View\\\\Middleware\\\\ShareErrorsFromSession.php\",\n            \"line\": 49,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\View\\\\Middleware\\\\ShareErrorsFromSession\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Session\\\\Middleware\\\\StartSession.php\",\n            \"line\": 121,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Session\\\\Middleware\\\\StartSession.php\",\n            \"line\": 64,\n            \"function\": \"handleStatefulRequest\",\n            \"class\": \"Illuminate\\\\Session\\\\Middleware\\\\StartSession\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Session\\\\Middleware\\\\StartSession\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Cookie\\\\Middleware\\\\AddQueuedCookiesToResponse.php\",\n            \"line\": 37,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Cookie\\\\Middleware\\\\AddQueuedCookiesToResponse\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Cookie\\\\Middleware\\\\EncryptCookies.php\",\n            \"line\": 67,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Cookie\\\\Middleware\\\\EncryptCookies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 726,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 703,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 667,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 656,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 167,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n            \"line\": 49,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 142,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 111,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\public\\\\index.php\",\n            \"line\": 52,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Github\\\\scan1\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\resources\\\\server.php\",\n            \"line\": 16,\n            \"function\": \"require_once\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"hello world\",\r\n    \"description\": \"a shorter description\",\r\n    \"in_stock\": 1,\r\n    \"price\": 1234\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/products/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Product",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"hello world\",\r\n    \"description\": \"a shorter description\",\r\n    \"in_stock\": 1,\r\n    \"price\": 1234\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/products/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 09:40:31 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 09:40:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IlMyU0c2ODdFKytNaE41bStzMFhJcVE9PSIsInZhbHVlIjoiWWpMUDQxN1NFcDVTVm00SUVWSDlweVUzalExLzVrR3VPVlk0VkNUaUpLQUU1WlVuZ2F0Wm5LV0JWcWFaQ2cvWkptNzJML3E0WUtpeTQ1SThQcHQvczNaU1c0MGNiMjJVNXZ1dUJHL1pySVpVNmxIaW8zOThHV3I1RlpuTEQxZW8iLCJtYWMiOiJhZmMwNzYzZjdkMDdmNTI0YmFhNjFlNWYyYWExNzc3OGY4YWRkYzA1YjRhYzViOTc5OWI1OWVhMGY5OGFlYmJjIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 11:40:31 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6Ik9RUXhMSlYva0s3V2l6dlBqYVBBSXc9PSIsInZhbHVlIjoidFNkOWNrdFRpekVNam95eHhySmNtWHhocXNLbTNlblpBZlRodmp4QWNhc0lNU2FyVkwrakh2U3RBczF6VTlxSlA2dXBnRVRoRlBZOVZKMjR5VnU2SjU4SzRWRXkxQU50WUZ0MTdrcmVMVmh5R25wcVRoam9TOFZyeTlhdGFsYlUiLCJtYWMiOiJhNWE5ZjUwN2VlYWU3YTRlMmRiMDZkZDU1YzZjN2Q0OWRmZDYzMjQ3MmM5MTA4Mjc4MTRhZTZlZDIzZTkyOTk0IiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 11:40:31 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"hello world\",\n    \"description\": \"a shorter description\",\n    \"sku\": \"55396\",\n    \"in_stock\": 1,\n    \"price\": 1234,\n    \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n    \"updated_at\": \"2022-04-13T09:40:31.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Tag To Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"nyt tag\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/products/1/add-tag",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								"1",
+								"add-tag"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Tag To Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"nyt tag\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/products/1/add-tag",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"1",
+										"add-tag"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 11:28:07 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 11:28:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IjlZK2ZFaW1BanY5L0wvMTVZb21WdFE9PSIsInZhbHVlIjoibVY2MmdVZlkybjE2ZDltOStWaDU1WmZiMnFvTGo4UzJBRUVaZmFZNjkyZ215U0N0b3E3d040WmxMb1ZMazZoMkowOW1pc3VkNlM0bFgvZGs1Sld2L1Z2OStVZFhYS0tySEJhczYxUzdPK2E2bTcxZnY2NXNDKzNDc3MrUHovT1MiLCJtYWMiOiIyMTc1NTg0NDlkNzY2MzI5NTNmMjAyODUxYmE4OWE1ZDQyYzQxZDgyMjY3MzZmNGM3MWIyZjVmNWM2YzY0MTE3IiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 13:28:07 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IlR4RHV4MlBqL2tCRXJxUkxBMkpEY3c9PSIsInZhbHVlIjoiOTFvaUZZeFltVHhjcDhyeXkrYTh2OHMySXgrRVU4VDlkSUR4ZGlseE5vWFM1M0dLUkdzakdGN1BsUmVPNWRhdVloN2tNbHFoZVY5a1NyZDdzdkZtdkpOYXlzb213N2J4ZVpTOXJ2UjZFVjZoME1qM1VOZlNUTENuTHRybFNwYUwiLCJtYWMiOiJjYWY4ZTMzNTRlYzIzZjY2YTUyZGQyMGVjZTRlZDQ2NjNhZTM2OTVjNDcxNWU3Y2MyMDc0ZDA0MDYzNjVkZmFmIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 13:28:07 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"drinkware\",\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"pivot\": {\n            \"product_id\": 1,\n            \"tag_id\": 1\n        }\n    },\n    {\n        \"id\": 6,\n        \"name\": \"nyt tag\",\n        \"created_at\": \"2022-04-13T11:27:54.000000Z\",\n        \"updated_at\": \"2022-04-13T11:27:54.000000Z\",\n        \"pivot\": {\n            \"product_id\": 1,\n            \"tag_id\": 6\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Attach Tag to  Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/products/1/tag/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								"1",
+								"tag",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Tag To Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"nyt tag\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/products/1/add-tag",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"1",
+										"add-tag"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 11:28:07 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 11:28:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IjlZK2ZFaW1BanY5L0wvMTVZb21WdFE9PSIsInZhbHVlIjoibVY2MmdVZlkybjE2ZDltOStWaDU1WmZiMnFvTGo4UzJBRUVaZmFZNjkyZ215U0N0b3E3d040WmxMb1ZMazZoMkowOW1pc3VkNlM0bFgvZGs1Sld2L1Z2OStVZFhYS0tySEJhczYxUzdPK2E2bTcxZnY2NXNDKzNDc3MrUHovT1MiLCJtYWMiOiIyMTc1NTg0NDlkNzY2MzI5NTNmMjAyODUxYmE4OWE1ZDQyYzQxZDgyMjY3MzZmNGM3MWIyZjVmNWM2YzY0MTE3IiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 13:28:07 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IlR4RHV4MlBqL2tCRXJxUkxBMkpEY3c9PSIsInZhbHVlIjoiOTFvaUZZeFltVHhjcDhyeXkrYTh2OHMySXgrRVU4VDlkSUR4ZGlseE5vWFM1M0dLUkdzakdGN1BsUmVPNWRhdVloN2tNbHFoZVY5a1NyZDdzdkZtdkpOYXlzb213N2J4ZVpTOXJ2UjZFVjZoME1qM1VOZlNUTENuTHRybFNwYUwiLCJtYWMiOiJjYWY4ZTMzNTRlYzIzZjY2YTUyZGQyMGVjZTRlZDQ2NjNhZTM2OTVjNDcxNWU3Y2MyMDc0ZDA0MDYzNjVkZmFmIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 13:28:07 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"drinkware\",\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"pivot\": {\n            \"product_id\": 1,\n            \"tag_id\": 1\n        }\n    },\n    {\n        \"id\": 6,\n        \"name\": \"nyt tag\",\n        \"created_at\": \"2022-04-13T11:27:54.000000Z\",\n        \"updated_at\": \"2022-04-13T11:27:54.000000Z\",\n        \"pivot\": {\n            \"product_id\": 1,\n            \"tag_id\": 6\n        }\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Tags",
+			"item": [
+				{
+					"name": "Get Tags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/tags",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Tags",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/tags",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tags"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 11:32:20 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 11:32:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6ImdUUDZKT0lhVklkeGsvTGsxZDFMckE9PSIsInZhbHVlIjoidE9vTElRUjhiZzYyakNoWmhadzBCSVN3UkQvOWhwM2xEYjQyTndBRm16cSs5RUVHVFhGRTVUdWhTaENTL3VJNlh5ZGg2aUlMYktDQkR4MVEySlp6L005d2x4c0kzVmZWejFGbWFBajg5RW1qYXkyazZsbm53SmZMam5rUnQ4T3giLCJtYWMiOiJhMTk2ZGI1ZDA4ZTVhMTgwZmEzNTYzNmZmYzcxZGEzYzIxM2ZiMjIyZDFhZTRkZDFkOTk5ZjNmZjk5MThjYTQwIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 13:32:20 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IlA3cjc4bDdaM04wUENyengrMGswUXc9PSIsInZhbHVlIjoiSVphSEQxY05ITWJnUFViUUFhbUswMmRreVp6dEFybFdSOE90My9MSks1b0F5T013STFvMVlTQzJ3aUJzZzl0ZjFLajNVZjBGdE9iYWJ0MmhWUTNBYUJSb3MySW8vUk1OeFZQd1lqTUJHZC9QZ2gyaFplUk03UmZZTm11Tmh3WWUiLCJtYWMiOiIwMTkzNjcxZWEwODQ2OGNmODM1ZTc3ZmE1NDViZjVkNmZlNjE5NTRlZmEwYWE4NzMwMzI5OTlmOGJhZGFkMTZhIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 13:32:20 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"drinkware\",\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"hardware\",\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"kvm switch\",\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"hoodies\",\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"specials\",\n        \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n        \"updated_at\": \"2022-04-13T08:25:37.000000Z\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"nyt tag\",\n        \"created_at\": \"2022-04-13T11:27:54.000000Z\",\n        \"updated_at\": \"2022-04-13T11:27:54.000000Z\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"nyt tag2\",\n        \"created_at\": \"2022-04-13T11:28:24.000000Z\",\n        \"updated_at\": \"2022-04-13T11:28:24.000000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Tag",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tags/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tags",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Tag",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/tags/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tags",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 11:45:26 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 11:45:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IlU5TUt6Uk11VEQ3ZkpjbThLQ1Vvbnc9PSIsInZhbHVlIjoicFFwM3NzeEJmMUdHUmtnZjdCdVpTUEJKWm5wcUpJSVEyTGFyOWNkYmlhQkU0d3Y4bmRlcTZJVW9MZmI2ZE95aFpGUGlaQndkQlRVdU45akVLL1lyUGEyaFZmQ1ZCWmVTUTFFaWxyYUNEVVNRcUVSYWZHVTAybGRqVGdLTS9qMkYiLCJtYWMiOiIwZmVlNzI5YzVmZmFjNWU4OTIyYjMzZDZhY2Y3ZTkzZmU2YmJkOWI5NzMxNzUyZWU3MGYyZjFiMjVmNDBmYjNhIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 13:45:26 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IlVabGdkZ3FEM2NVOTAzMkRJTnRVTmc9PSIsInZhbHVlIjoiTWJrSVE1clVFU08vQkhSZGZLQzVhUlcyUEpFbDZMRGFqNXpsNnpWKzBmZmppb0UvZmhrSFlVTElCY2s5UlFJREJMUjdXaVR4VGp6dTJsNmlQazZJUVU5YUZEZjhkNkIybDNVeVlNTTB6Zit4RmRYcnhscFU0RDF4R2xhamw3ajAiLCJtYWMiOiJjOTM0ODI0MjExYTUyZDJlNDVjNzI0NDBlZjM4YTJjZTMwNmI3NWFjZjdkM2UxMjhlZTZkYzA4YWQxZTU1MTYwIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 13:45:26 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"drinkware\",\n    \"created_at\": \"2022-04-13T08:25:37.000000Z\",\n    \"updated_at\": \"2022-04-13T08:25:37.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Tag",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tag created via postman2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/tags",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tag",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tag updated via postman\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/tags/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tags",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Tag",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Tag updated via postman\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/tags/9",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tags",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 11:42:51 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 11:42:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IlRDeTVoVFY3NkJPcjMxN050Z0JPckE9PSIsInZhbHVlIjoiOHpJZnlHbTZiT1plVy8ySEwxU0swMUVmS3lQcE5BT0FQSTVSTUFSV213WXkwNkJpQ2UrZmkyTk5kRGk3NVBYVCtKU1c5UkFHNnhDU1hwWnRLcmcvNFVNV1Q0ell6OUt1TnN2SUtkRldSZ2RoekhCaGZVaHNTRVQxZkhJOGF0OVMiLCJtYWMiOiI5ZDI3NTc5ZjY5N2ZmZjE4MzRjMGE4MDY1MDMwOTdlNzUwZjgzZmNmMmI0NTRiNzE4ZWJhNTU1NGFmYTAyZGUwIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 13:42:51 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6Ilpsbno3MzhTNkdMaCtWcjIwclpsS3c9PSIsInZhbHVlIjoiNmFrR3A3UzRmM2l4WEhTSjE1SFlVZEZHZEQvYUhYZlh3OHMweW9HZ3hCdHNpa3l0UVZDVnpibjJ2OGNsd2h3UGdPZnJybUg3bUVMSnJGU1RuSkFGWVFueTF1akRRMERHaTRCN2JUcWpLSUJtM2xjQS9xNTRDRDJGQlh6MGNLNlUiLCJtYWMiOiIzNjkxMTRkMmZlNzA2NWY1MzZjYmRkZmY5NzM5NTU0NmRiM2FlYzI0YzMwNTM5YWZlNWQ3N2E2YWRkNzAxOTE3IiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 13:42:51 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 9,\n    \"name\": \"Tag updated via postman\",\n    \"created_at\": \"2022-04-13T11:34:49.000000Z\",\n    \"updated_at\": \"2022-04-13T11:42:25.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Tag",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tags/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tags",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Tag",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/tags/9",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tags",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 11:43:51 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 11:43:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IjVnMFFBRE9LYmJVT3d5NTl6ODRwREE9PSIsInZhbHVlIjoiR3RjNWE1djdIcVlLeGdCNFNWcGc0azZESUhjMnNoVEhoSXdLTmRXNzl5WFFUMk5EREoyb3A5Q0Y4L2FWRGFXNVZTSzBZMDdsYjVYL2dQM0IyNDFROUhaZUR4aldNQi85aEhwbzZMUHJkUkpJbW9mMmpPYWs1ZzNzWWo4RkZvVVoiLCJtYWMiOiI4NzYyMjczZTFiMzdhMGQ0YmYzNDk3M2YwN2VlYmQ1N2ExZjY5MjJlODVlYjMzZmU1ZDMzZGEwZjZlNWI2MmQzIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 13:43:51 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6InljQ3o4VHQweS9qUm10OUQ3QmwrTGc9PSIsInZhbHVlIjoiTHJBVmZEV08yemJpUDc1NE52RmsxeG44dDFRTGdDTFp2OE1HYmY5NGpETXorbGxYSHdjczk5eHpTb0FUQ2dQL3owRnBzalZKTWZpejRoS20vVjhiUGl1TjhNOG9CanNhdldxNGVqa1p0TURrWU9LR1RFSnRjaXdNY21YQjk3S2YiLCJtYWMiOiI2M2E0NDBlNTE2N2RhODFjOTE5NTBmMDVjMThjYTY4NWRjNjY1YzMyM2EyYTJkNDg1ZjgzNTU4YWJkZTQ0ZDkyIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 13:43:51 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						},
+						{
+							"name": "Delete Tag 404",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/tags/9",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tags",
+										"9"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 11:44:23 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Apr 2022 11:44:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IjhPS0VVNnk3VHhyVzRJcDR4TVc5Qnc9PSIsInZhbHVlIjoiQnJLeGt6czZyQlUxbnNsenJnQ09yNElQNUZXYVUwMVJWYko4clFKaEN5azk0cGk3dUIyKyt2cG4yeEZPNm1xVG5aclh5eXlyZUZ2Qk4zQk5aMWhoajNQYVpOWFE4NSt4WG1tSk12MFNSUEF3ODR6Q0NQMEg5Z0p5d3k3SWFGUDIiLCJtYWMiOiIzZTJmOGNhZThhNzAwMWUxMWU2ZDVkOWQzNjUyNTVkNDE1NDI4NzUyMmU2YzZhYzYxODQwOTc4OTIyNzE4MmMxIiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 13:44:23 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "laravel_session=eyJpdiI6IkdNbHRNOGp1S0lleHdHblpKcHI5bFE9PSIsInZhbHVlIjoid1A4b2lEUk1RNU9CemQwNTZRR2lHZFU5R0NZMkRpM3UwSFpCVUdLK0xxcjlQQkhDNGRLKzJwd1VSVkRNT2tKTjI0RTRLTFJrZzk4cnZINEZZNE5SUk1CKzdSMmhGNjg3elRDZnpxYW9DS21yelFUa3lXSUk0OUQya0dFM3AyUzkiLCJtYWMiOiJmMjdkZWM1ZDU4OTAxYzY1NjExMjI2MWMwMGMwMDhlYzFiNGEwN2IwZDlmMzM1YWUwZmJmZmEwZjI5OGRlMjE0IiwidGFnIjoiIn0%3D; expires=Wed, 13-Apr-2022 13:44:23 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No query results for model [App\\\\Models\\\\Tag] 9\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
